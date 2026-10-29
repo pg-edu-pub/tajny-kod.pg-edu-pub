@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wprowadź kod dostępu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            font-size: 20px;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+            letter-spacing: 3px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Podaj 6-cyfrowy kod</h2>
+    <!-- Atrybut maxlength="6" blokuje wpisanie dłuższego kodu -->
+    <input type="text" id="code-input" maxlength="6" placeholder="000000" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+    <br>
+    <button onclick="checkCode()">Zatwierdź</button>
+    <div id="error-message" class="error"></div>
+</div>
+
+<script>
+    function checkCode() {
+        const correctCode = "123456"; // Tutaj wpisz swój 6-cyfrowy kod
+        const targetPage = "tajna_strona.html"; // Nazwa strony docelowej
+        
+        const userInput = document.getElementById("code-input").value;
+        const errorMessage = document.getElementById("error-message");
+
+        if (userInput === correctCode) {
+            // Przekierowanie na nową stronę
+            window.location.href = targetPage;
+        } else {
+            // Komunikat o błędzie
+            errorMessage.textContent = "Nieprawidłowy kod. Spróbuj ponownie.";
+        }
+    }
+</script>
+
+</body>
+</html>
