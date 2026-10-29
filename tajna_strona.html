@@ -1,14 +1,63 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Strona z treścią</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ostatnia potyczka 😊</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e1e2f 0%, #252542 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #00ffcc;
+            font-size: 28px;
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 15px 0;
+            color: #e0e0fc;
+        }
+        .question {
+            font-weight: bold;
+            color: #ffcc00;
+            margin-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Sukces!</h1>
-    <p>To jest ukryta zawartość, która pojawia się po wpisaniu poprawnego kodu.</p>
+
+<div class="card">
+    <h1>Ostatnia potyczka 😊</h1>
+    <p>W klasie jest 20 uczniów.</p>
+    <p>12 z nich uważa, że escape room był łatwy.</p>
+    <p class="question">O ile procent więcej uczniów uważa, że był łatwy, niż tych, którzy uważają, że był trudny?</p>
+</div>
+
 </body>
 </html>
